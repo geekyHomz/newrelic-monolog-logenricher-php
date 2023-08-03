@@ -1,12 +1,16 @@
 {
-    "name": "newrelic/monolog-enricher",
-    "description": "Monolog components to enable New Relic Logs",
+    "name": "geekyhomz/monolog-enricher",
+    "description": "Monolog components to enable New Relic Logs | forked",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "New Relic PHP",
             "email": "php-agent@newrelic.com"
+        },
+        {
+            "name": "Mohamed Emad",
+            "email": "thegeekym@gmail.com"
         }
     ],
     "require": {

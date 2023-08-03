@@ -1,7 +1,6 @@
-[![Archived header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Archived.png)](https://opensource.newrelic.com/oss-category/#archived)
-# Monolog components to enable New Relic logs
-
 [![Latest Stable Version](https://poser.pugx.org/newrelic/monolog-enricher/version)](https://packagist.org/packages/newrelic/monolog-enricher) [![Latest Unstable Version](https://poser.pugx.org/newrelic/monolog-enricher/v/unstable)](//packagist.org/packages/newrelic/monolog-enricher) [![CircleCI](https://circleci.com/gh/newrelic/newrelic-monolog-logenricher-php.svg?style=svg)](https://circleci.com/gh/newrelic/newrelic-monolog-logenricher-php) [![License](https://poser.pugx.org/newrelic/monolog-enricher/license)](https://packagist.org/packages/newrelic/monolog-enricher)
+
+This is a forked version of Monolog compatible with laravel 10
 
 This package provides the components required to integrate a PHP application
 using [Monolog](https://github.com/Seldaek/monolog) with
@@ -67,7 +66,7 @@ This package is available
 should be installed using [Composer](https://getcomposer.org):
 
 ```bash
-composer require newrelic/monolog-enricher
+composer require geekyhomz/monolog-enricher
 ```
 
 ## Getting Started
