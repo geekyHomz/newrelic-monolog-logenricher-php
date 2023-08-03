@@ -52,9 +52,9 @@ abstract class AbstractFormatter extends JsonFormatter
     protected function normalize($data, $depth = 0)
     {
         if ($depth == 0) {
-            if (isset($data['extra']['newrelic-context'])) {
-                $data = array_merge($data, $data['extra']['newrelic-context']);
-                unset($data['extra']['newrelic-context']);
+            if (isset($data->extra['newrelic-context'])) {
+                $data = array_merge($data, $data->extra['newrelic-context']);
+                unset($data->extra['newrelic-context']);
             }
             $data['timestamp'] = intval(
                 $data['datetime']->format('U.u') * 1000

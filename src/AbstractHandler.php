@@ -82,8 +82,8 @@ abstract class AbstractHandler extends AbstractProcessingHandler
     protected function getCurlHandler()
     {
         $host = is_null($this->host)
-              ? self::getDefaultHost($this->licenseKey)
-              : $this->host;
+            ? self::getDefaultHost($this->licenseKey)
+            : $this->host;
 
         $url = "{$this->protocol}{$host}/{$this->endpoint}";
         $ch = curl_init();

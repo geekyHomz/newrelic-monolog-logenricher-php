@@ -20,6 +20,7 @@ use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Handler\Curl;
 use Monolog\Handler\HandlerInterface;
 use Monolog\Logger;
+use Monolog\LogRecord;
 use Monolog\Util;
 
 class Handler extends AbstractHandler
@@ -29,9 +30,9 @@ class Handler extends AbstractHandler
      *
      * @param array $record
      */
-    protected function write(array $record): void
+    protected function write(LogRecord $record): void
     {
-        $this->send($record["formatted"]);
+        $this->send($record->formatted);
     }
 
     /**
@@ -46,7 +47,7 @@ class Handler extends AbstractHandler
     {
         $level = $this->level;
         $records = array_filter($records, function ($record) use ($level) {
-            return ($record['level'] >= $level);
+            return ($record->level >= $level);
         });
         if ($records) {
             $this->sendBatch($this->getFormatter()->formatBatch($records));

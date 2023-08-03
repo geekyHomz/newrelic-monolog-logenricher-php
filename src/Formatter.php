@@ -38,19 +38,19 @@ class Formatter extends AbstractFormatter
 
             // Adhere to format of Monolog 2.x JSON format
             if (
-                isset($normalized['context'])
-                && $normalized['context'] === []
+                isset($normalized->context)
+                && $normalized->context === []
             ) {
-                $normalized['context'] = new \stdClass();
+                $normalized->context = new \stdClass();
             }
             if (
-                isset($normalized['extra'])
-                && $normalized['extra'] === []
+                isset($normalized->extra)
+                && $normalized->extra === []
             ) {
-                $normalized['extra'] = new \stdClass();
+                $normalized->extra = new \stdClass();
             }
 
-            $records[$key] = $normalized;
+            $records->$key = $normalized;
         }
         return $this->toJson($records, true);
     }
